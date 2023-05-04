@@ -3,7 +3,7 @@
 ## Video Demo:  <URL HERE>
 
 ### Description:
-This is a simple AI chatbot web app that uses OpenAI API to generate AI responses to user prompts. The app is built with HTML, CSS, and JavaScript and is deployed using Netlify.
+This is a simple AI chatbot web app that uses OpenAI API to generate AI responses to user prompts. The app is built with HTML, CSS, and JavaScript and deployed locally.
 
 #### Prerequisites
 To run this app locally, you will need the following:

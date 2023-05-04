@@ -6,6 +6,13 @@ const chatContainer = document.querySelector('#chat_container');
 
 let loadInterval;
 
+function generateUniqueId() {
+  const timestamp = Date.now();
+  const randomNumber = Math.floor(Math.random() * 1000000);
+
+  return `id-${timestamp}-${randomNumber}`;
+}
+
 function loader(element) {
   element.textContent = '';
 
@@ -18,7 +25,7 @@ function loader(element) {
   }, 300)
 }
 
-function typeText(element, text) {
+function typeText(element, text, uniqueId) {
   let index = 0;
 
   let interval = setInterval(() => {
@@ -32,11 +39,7 @@ function typeText(element, text) {
   }, 20)
 }
 
-function generateUniqueId() {
-  const randomNumber = Math.random();
 
-  return 'id-${randomNumber}';
-}
 
 function chatStripe(isAi, value, uniqueId) {
   return (
@@ -92,7 +95,7 @@ const handleSubmit = async (e) => {
     const data = await response.json();
     const parsedData = data.bot.trim() // trims any trailing spaces/'\n' 
 
-    typeText(messageDiv, parsedData)
+    typeText(messageDiv, parsedData, uniqueId)
   } else {
     const err = await response.text()
 

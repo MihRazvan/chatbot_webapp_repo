@@ -1,3 +1,4 @@
+/* Import font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
 
 /* Global styles */
@@ -6,10 +7,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Alegreya Sans", sans-serif;
+  /* Set the font family to "Alegreya Sans" for all elements */
 }
 
 body {
   background: #343541;
+  /* Set the background color of the page to a dark gray */
 }
 
 /* Chat app styles */
@@ -17,6 +20,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: #f4f4f4;
+  /* Set the background color of the chat app to a light gray */
 
   display: flex;
   flex-direction: column;
@@ -29,19 +33,23 @@ body {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
+  /* Add vertical scrolling to the chat container */
 
   display: flex;
   flex-direction: column;
   gap: 10px;
 
   -ms-overflow-style: none;
+  /* Hide the scrollbar in Internet Explorer and Edge */
   scrollbar-width: none;
+  /* Hide the scrollbar in Firefox, Chrome, and Safari */
 
   padding-bottom: 20px;
   scroll-behavior: smooth;
+  /* Enable smooth scrolling */
 }
 
-/* hides scrollbar */
+/* Hide the scrollbar in Firefox, Chrome, and Safari */
 #chat_container::-webkit-scrollbar {
   display: none;
 }
@@ -58,6 +66,7 @@ body {
 .chat {
   width: 100%;
   max-width: 1280px;
+  /* Set a maximum width for the chat container */
   margin: 0 auto;
 
   display: flex;
@@ -72,6 +81,7 @@ body {
   border-radius: 50%;
 
   background: #5436DA;
+  /* Set the background color of the user profile to a shade of blue */
 
   display: flex;
   justify-content: center;
@@ -80,6 +90,7 @@ body {
 
 .ai .profile {
   background: #10a37f;
+  /* Set the background color of the AI profile to a shade of green */
 }
 
 .profile img {
@@ -96,15 +107,18 @@ body {
 
   max-width: 100%;
   overflow-x: scroll;
+  /* Add horizontal scrolling to the message container */
 
   /* Allow text to wrap */
   white-space: pre-wrap;
 
   -ms-overflow-style: none;
+  /* Hide the scrollbar in Internet Explorer and Edge */
   scrollbar-width: none;
+  /* Hide the scrollbar in Firefox, Chrome, and Safari */
 }
 
-/* hides scrollbar */
+/* Hide the scrollbar in Firefox, Chrome, and Safari */
 .message::-webkit-scrollbar {
   display: none;
 }
@@ -112,6 +126,7 @@ body {
 form {
   width: 100%;
   max-width: 1280px;
+  /* Set a maximum width for the form */
   margin: 0 auto;
   padding: 10px;
   background: #f4f4f4;
@@ -120,6 +135,7 @@ form {
   flex-direction: row;
   gap: 10px;
 }
+
 
 textarea {
   width: 100%;

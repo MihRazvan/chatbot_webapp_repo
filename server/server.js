@@ -25,16 +25,16 @@ app.post('/', async (req, res) => {
     try {
         const prompt = req.body.prompt;
 
-        response = openai.Completion.create(
-            model = "text-davinci-003",
-            prompt = '{prompt}',
-            temperature = 0,
-            max_tokens = 100,
-            top_p = 1,
-            frequency_penalty = 0,
-            presence_penalty = 0,
-            stop = ["\n"]
-        )
+        const response = await openai.createCompletion({
+            model: "text-davinci-003",
+            prompt: `${prompt}`,
+            temperature: 0,
+            max_tokens: 100,
+            top_p: 1,
+            frequency_penalty: 0.5,
+            presence_penalty: 0,
+            stop: ["\n"],
+        });
 
         res.status(200).send({
             bot: response.data.choices[0].text

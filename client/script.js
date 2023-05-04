@@ -88,7 +88,7 @@ const handleSubmit = async (e) => {
   const messageDiv = document.getElementById(uniqueId);
   loader(messageDiv);
 
-  // Send a request to the AI server with the user's input
+  // Send a request to the server with the user's input
   const response = await fetch('http://localhost:5000/', {
     method: 'POST',
     headers: {

@@ -1,6 +1,6 @@
 # AiBuddy - AI Chatbot Web App
 
-## Video Demo:  <URL HERE>
+## Video Demo:  https://youtu.be/S4YJqvrCl1I
 
 ### Description:
 This is a simple AI chatbot web app that uses OpenAI API to generate AI responses to user prompts. The app is built with HTML, CSS, and JavaScript and deployed locally.
